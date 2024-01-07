@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #D6D3D3;
+    font-family: "Roboto", sans-serif;
+    color: #535353;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.upper-info {
+    display: flex;
+    align-self: flex-end;
+    gap: 15px;
+    font-size: 33px;
+    font-weight: 700;
+    margin-bottom: 75px;
+}
+
+#btn-show-next {
+    background-image: url(img/right.svg);
+    height: 29px;
+    width: 29px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 1px;
+    margin-bottom: 2px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1060px;
+    height: 705px;
+    padding: 95px 145px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.app__name {
+    font-size: inherit;
+    font-weight: 700;
+    padding-bottom: 45px;
+    text-transform: uppercase;
+}
+
+.app__content {
+    height: 100%;
+}
+
+.user__select {
+    padding-bottom: 42px;
+}
+
+.select__options__list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: #D6D3D3;
+}
+
+.select__options__item {
+    padding-bottom: 9px;
+}
+
+.select__options__item--active {
+    color: #535353;
+}
+
+.select__track {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 35px;
+    border-radius: 30px;
+    border: 1px solid #F5F5F5;
+    background: #898989;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.select__section:not(:first-child) {
+    background-image: url(img/divided.svg);
+    background-repeat: no-repeat;
+    background-position: left, center;
+}
+
+.bar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.select__bar {
+    position: relative;
+    width: 176px;
+    height: 25px;
+    background-color: #D6D3D3;
+    border: 1px solid #fff;
+    border-radius: 15px;
+}
+
+.modal {
+    position: relative;
+    height: fit-content;
+    width: 423px;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    padding: 62px 67px;
+}
+
+.modal-wrapper {
+    background-color: rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.modal img {
+    padding-bottom: 60px;
+}
+
+.modal #response-text {
+    text-transform: uppercase;
+    font-size: 33px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.modal .btn-close {
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    top: 16px;
+    right: 12px;
+    transform: rotate(45deg);
+}
+
+.modal .btn-close::after,
+.modal .btn-close::before {
+    position: absolute;
+    content: " ";
+    height: 26px;
+    width: 2px;
+    background: #D9D9D9;
+    left: 50%;
+}
+
+.modal .btn-close::after {
+    transform: rotate(90deg);
+}

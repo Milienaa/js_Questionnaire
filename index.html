@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Assessment Questionnaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="app-container">
+            <section class="upper-info">
+                <span id="quiz-progress">0/0</span>
+                <span id="btn-show-next"></span>
+            </section>
+            <section class="main">
+                <h2 class="app__name">Projections Self-Assessment Questionnaire</h2>
+                <div class="app__content"></div>
+                <div class="user__select">
+                    <div class="select__options__list">
+                        <li class="select__options__item">almost never</li>
+                        <li class="select__options__item">sometimes</li>
+                        <li class="select__options__item">often</li>
+                        <li class="select__options__item">almost always</li>
+                    </div>
+                    <div class="select__track">
+                        <div class="select__section">
+                            <div class="bar-wrapper">
+                                <div class="select__bar"></div>
+                            </div>
+                        </div>
+                        <div class="select__section"></div>
+                        <div class="select__section"></div>
+                        <div class="select__section"></div>
+                    </div>
+                </div>
+            </section>
+            <div class="modal-wrapper" style="display: none;">
+                <div class="modal">
+                    <div class="btn-close"></div>
+                    <img src="img/happy.svg" alt="emotion" class="emoticon">
+                    <p id="response-text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        new Questionnaire('.app-container', questions).init();
+    </script>
+</body>
+</html>
